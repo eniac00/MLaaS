@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Red+Hat+Mono:wght@300&display=swap');
+
+
+
+.name {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 1px 4px grey;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.container {
+    text-align: center;
+    font-family: 'Red Hat Mono', monospace;
+    font-weight: bold;
+}
+
+form {
+    padding: 5px;
+}
+
+.form-container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    box-shadow: 0 1px 4px black;
+    padding: 10px;
+    height: 500px;
+}
+
+input[type=text] {
+    width: 25%;
+    border: none;
+    border-bottom: 2px solid black;
+    margin: 10px;
+    padding: 20px 20px;
+    font-family: 'Red Hat Mono', monospace;
+}
+
+input[type=email] {
+    border: none;
+    border-bottom: 2px solid black;
+    margin: 10px;
+    padding: 20px 20px;
+    font-family: 'Red Hat Mono', monospace;
+}
+
+input[type=password] {
+    border: none;
+    border-bottom: 2px solid black;
+    margin: 10px;
+    padding: 20px 20px;
+    font-family: 'Red Hat Mono', monospace;
+}
+.btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: 3px solid black;
+    color: black;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 110%;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    padding: 10px 40px;
+}
+
+
+.result {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    font-size: 80%;
+    margin-top: 20px;
+    margin-bottom: auto;
+    grid-template-rows: 2fr 3fr 2fr;
+}
+
+.vanish {
+    height: auto;
+    overflow: hidden;
+    transition: 0.8s;
+}
+
+@media only screen and (max-width: 768px) {
+    .name {
+        font-size: 70%;
+        width: 80%;
+    }
+
+    .result {
+        width: 90%;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.faculty {
+    position: absolute;
+    margin: 20px;
+}
