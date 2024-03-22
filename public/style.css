@@ -69,6 +69,18 @@ input[type=password] {
     transition: 0.5s;
 }
 
+.btnTable {
+    cursor: pointer;
+    background-color: transparent;
+    border: 3px solid black;
+    color: black;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 110%;
+    transition: 0.5s;
+}
+
 .btn:hover {
     padding: 10px 40px;
 }
@@ -112,7 +124,7 @@ input[type=password] {
     justify-content: flex-end;
 }
 
-.faculty {
+.show {
     position: absolute;
     margin: 20px;
 }

@@ -2,13 +2,16 @@
     <div class="name">
         <h1>MLaaS</h1>
     </div>
-    <div class="faculty">
-        <button class="btn" onclick="location.href='/instances'">Show Projects</button>
+    <div class="show">
+        {{#if show}}
+            <button class="btn" onclick="location.href='/'">create</button>
+        {{else}}
+            <button class="btn" onclick="location.href='/show'">Show Instances</button>
+        {{/if}}
     </div>
 </div>
 
-<div style="text-align: center; font-size: 80%; font-family: &#39;Red Hat Mono&#39;, monospace;">
+<div style="text-align: center; font-size: 80%; font-family: 'Red Hat Mono', monospace;">
     <h3>Run Machine Learning models without code</h3>
     <h3>create train &amp predict</h3>
 </div>
-

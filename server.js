@@ -19,11 +19,29 @@ app.set('views', path.join(__dirname, '/templates/views'));
 
 // resitering partials for templating engine
 hbs.registerPartials(path.join(__dirname, '/templates/partials'));
+// Define a custom "eq" helper
+
+hbs.registerHelper('eq', function(a, b, options) {
+    if (a === b) {
+        if (options && options.fn) {
+            return options.fn(this);
+        } else {
+            return true; // Return true if options.fn is not available
+        }
+    } else {
+        if (options && options.inverse) {
+            return options.inverse(this);
+        } else {
+            return false; // Return false if options.inverse is not available
+        }
+    }
+});
 
 
 // routes starts here
 app.use('/', require('./routes/root'));
 app.use('/create', require('./routes/create'));
+app.use('/show', require('./routes/show'));
 app.use('/train', require('./routes/train'));
 
 

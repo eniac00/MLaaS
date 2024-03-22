@@ -1,0 +1,46 @@
+<div style="margin: auto; width: 60%; border: 1px solid black; text-align: center;">
+    <table style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr style="font-weight: bold;">
+                <th style="border: 1px solid black;">Work Name</th>
+                <th style="border: 1px solid black;">Created At</th>
+                <th style="border: 1px solid black;">Container Name</th>
+                <th style="border: 1px solid black;">Task</th>
+                <th style="border: 1px solid black;">Model Name</th>
+                <th style="border: 1px solid black;">Target</th>
+                <th style="border: 1px solid black;">Status</th>
+                <th style="border: 1px solid black;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each instances}}
+            <tr>
+                <td style="border: 1px solid black;">{{workName}}</td>
+                <td style="border: 1px solid black;">{{createdAt}}</td>
+                <td style="border: 1px solid black;">{{containerName}}</td>
+                <td style="border: 1px solid black;">{{task}}</td>
+                <td style="border: 1px solid black;">{{modelName}}</td>
+                <td style="border: 1px solid black;">{{target}}</td>
+                <td style="border: 1px solid black;">{{status}}</td>
+                <td style="border: 1px solid black;">
+                    <form action="/your-endpoint" method="post" style="display: inline-block;">
+                        <input type="hidden" name="id" value="{{id}}">
+                        <input type="hidden" name="action" value="train">
+                        <button type="submit" class="btnTable" {{#if (eq status "trainable")}}{{else}} disabled{{/if}}>Train</button>
+                    </form>
+                    <form action="/your-endpoint" method="post" style="display: inline-block;">
+                        <input type="hidden" name="id" value="{{id}}">
+                        <input type="hidden" name="action" value="predict">
+                        <button type="submit" class="btnTable" {{#if (eq status "predictable")}}{{else}} disabled{{/if}}>Predict</button>
+                    </form>
+                    <form action="/your-endpoint" method="post" style="display: inline-block;">
+                        <input type="hidden" name="id" value="{{id}}">
+                        <input type="hidden" name="action" value="log">
+                        <button type="submit" class="btnTable">Log</button>
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
