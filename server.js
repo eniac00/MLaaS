@@ -43,6 +43,8 @@ app.use('/', require('./routes/root'));
 app.use('/create', require('./routes/create'));
 app.use('/show', require('./routes/show'));
 app.use('/train', require('./routes/train'));
+app.use('/predict', require('./routes/predict'));
+app.use('/showlog', require('./routes/showlog'));
 
 
 // telling the app to listen on port

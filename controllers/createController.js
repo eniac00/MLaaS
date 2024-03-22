@@ -1,12 +1,9 @@
-const low = require('lowdb');
-const FileSync = require('lowdb/adapters/FileSync');
+const db = require('../config/db');
 const ShortUniqueId = require('short-unique-id');
 const fs = require('fs');
 const { format } = require('date-fns');
 const Docker = require('dockerode');
 
-const adapter = new FileSync('db.json');
-const db = low(adapter);
 const uid = new ShortUniqueId({ length: 10,  dictionary: 'hex'});
 
 
@@ -63,7 +60,7 @@ const create = async (req, res) => {
             const containerName = data.Name.substring(1); // Remove the leading '/'
 
             // Start the container
-            container.start({ detach: true }, (err) => {
+            container.start((err) => {
             if (err) {
                 console.error(`Error starting container: ${err.message}`);
                 res.status(400).json({"message": "error"});
@@ -86,7 +83,7 @@ const create = async (req, res) => {
                     .push(record)
                     .write();
 
-                return res.redirect('/show');
+                res.redirect('/show');
             });
         });
     });

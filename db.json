@@ -1,5 +1,15 @@
 {
   "instances": [
-
+    {
+      "id": "e5c4579459",
+      "workName": "project1",
+      "createdAt": "22 March 2024, 14:20",
+      "containerName": "dazzling_bardeen",
+      "task": "Classification",
+      "status": "trainable",
+      "modelName": "LinearRegression",
+      "target": "price",
+      "csvFile": "./resources/e5c4579459/data.csv"
+    }
   ]
 }

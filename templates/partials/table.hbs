@@ -23,19 +23,19 @@
                 <td style="border: 1px solid black;">{{target}}</td>
                 <td style="border: 1px solid black;">{{status}}</td>
                 <td style="border: 1px solid black;">
-                    <form action="/your-endpoint" method="post" style="display: inline-block;">
+                    <form action="/train" method="post" style="display: inline-block;">
                         <input type="hidden" name="id" value="{{id}}">
                         <input type="hidden" name="action" value="train">
                         <button type="submit" class="btnTable" {{#if (eq status "trainable")}}{{else}} disabled{{/if}}>Train</button>
                     </form>
-                    <form action="/your-endpoint" method="post" style="display: inline-block;">
+                    <form action="/predict" method="post" style="display: inline-block;">
                         <input type="hidden" name="id" value="{{id}}">
                         <input type="hidden" name="action" value="predict">
                         <button type="submit" class="btnTable" {{#if (eq status "predictable")}}{{else}} disabled{{/if}}>Predict</button>
                     </form>
-                    <form action="/your-endpoint" method="post" style="display: inline-block;">
+                    <form action="/showlog" method="post" style="display: inline-block;">
                         <input type="hidden" name="id" value="{{id}}">
-                        <input type="hidden" name="action" value="log">
+                        <input type="hidden" name="action" value="showlog">
                         <button type="submit" class="btnTable">Log</button>
                     </form>
                 </td>

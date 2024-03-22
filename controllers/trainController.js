@@ -1,7 +1,8 @@
 
 
 const train = (req, res) => {
-    res.status(200).json({ message: "train will work" });
+    const { id } = req.body;
+    res.status(200).json({ "message": `in train ${id}` });
 }
 
 module.exports = {
