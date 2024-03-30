@@ -9,6 +9,6 @@ CSE484 (Cloud Computing Project)
 
 # Screenshots
 
-![MLaaS-1](/home/abir/MLaaS/screenshots/MLaaS-1.png)
+![MLaaS-1](./screenshots/MLaaS-1.png)
 
-![MLaaS-2](/home/abir/MLaaS/screenshots/MLaaS-2.png)
+![MLaaS-2](./screenshots/MLaaS-2.png)
