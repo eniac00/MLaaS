@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Red+Hat+Mono:wght@300&display=swap');
 
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
 
 
 .name {
@@ -19,8 +23,31 @@
     font-weight: bold;
 }
 
+
+label {
+    display: inline-block;
+    width: 120px; /* Adjust the width as needed */
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+select,
+input[type="file"] {
+    width: calc(100% - 130px); /* Adjust for label width and margin */
+    padding: 8px;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-family: 'Red Hat Mono', monospace;
+}
+
+
 form {
-    padding: 5px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .form-container {
@@ -30,10 +57,10 @@ form {
     display: block;
     box-shadow: 0 1px 4px black;
     padding: 10px;
-    height: 500px;
+    height: 530px;
 }
 
-input[type=text] {
+/* input[type=text] {
     width: 25%;
     border: none;
     border-bottom: 2px solid black;
@@ -42,21 +69,7 @@ input[type=text] {
     font-family: 'Red Hat Mono', monospace;
 }
 
-input[type=email] {
-    border: none;
-    border-bottom: 2px solid black;
-    margin: 10px;
-    padding: 20px 20px;
-    font-family: 'Red Hat Mono', monospace;
-}
-
-input[type=password] {
-    border: none;
-    border-bottom: 2px solid black;
-    margin: 10px;
-    padding: 20px 20px;
-    font-family: 'Red Hat Mono', monospace;
-}
+*/
 .btn {
     cursor: pointer;
     background-color: transparent;
@@ -74,12 +87,30 @@ input[type=password] {
     background-color: transparent;
     border: 3px solid black;
     color: black;
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-weight: bold;
     font-family: 'Red Hat Mono', monospace;
-    font-size: 110%;
+    font-size: 100%;
     transition: 0.5s;
 }
+
+.btnTable:disabled:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border: 3px solid black;
+    color: black;
+    padding: 10px 10px;
+    font-weight: bold;
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 100%;
+    transition: 0.5s;
+}
+
+.btnTable:hover {
+    color: white;
+    background-color: black;
+}
+
 
 .btn:hover {
     padding: 10px 40px;

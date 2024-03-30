@@ -8,7 +8,7 @@ const uid = new ShortUniqueId({ length: 10,  dictionary: 'hex'});
 
 
 const create = async (req, res) => {
-    const { workName, task, modelName, target } = req.body;
+    const { workName, learning, task, modelName, target } = req.body;
     const id = uid.rnd();
     const formattedDate = format(new Date(), 'dd MMMM yyyy, HH:mm'); 
 
@@ -72,8 +72,9 @@ const create = async (req, res) => {
                     'workName': workName,
                     'createdAt': formattedDate,
                     'containerName': containerName,
-                    'task': task,
                     'status': 'trainable',
+                    'learning': learning,
+                    'task': task,
                     'modelName': modelName,
                     'target': target,
                     'csvFile': csvFile

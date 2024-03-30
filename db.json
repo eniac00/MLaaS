@@ -1,15 +1,28 @@
 {
   "instances": [
     {
-      "id": "e5c4579459",
+      "id": "240019cb0b",
       "workName": "project1",
-      "createdAt": "22 March 2024, 14:20",
-      "containerName": "dazzling_bardeen",
-      "task": "Classification",
+      "createdAt": "30 March 2024, 19:03",
+      "containerName": "exciting_grothendieck",
       "status": "trainable",
-      "modelName": "LinearRegression",
-      "target": "price",
-      "csvFile": "./resources/e5c4579459/data.csv"
+      "learning": "MachineLearning",
+      "task": "Classification",
+      "modelName": "DT",
+      "target": "petals",
+      "csvFile": "./resources/240019cb0b/data.csv"
+    },
+    {
+      "id": "7d802e50c8",
+      "workName": "hello1",
+      "createdAt": "30 March 2024, 19:15",
+      "containerName": "thirsty_mclean",
+      "status": "trainable",
+      "learning": "DeepLearning",
+      "task": "ImageClassification",
+      "modelName": "MobileNet",
+      "target": "petals",
+      "csvFile": "./resources/7d802e50c8/data.csv"
     }
   ]
 }

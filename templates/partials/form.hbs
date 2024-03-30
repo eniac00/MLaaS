@@ -1,16 +1,29 @@
 <div class="container">
     <div class="form-container">
+
         <form action="/create" method="POST" enctype="multipart/form-data">
-            <p style="font-size: 70%;">Please fill in the form.</p>
-            <input type="text" name="workName" placeholder="Work Name" required>
-            <br>
-            <input type="text" name="task" placeholder="Task (e.g. Regression, Classification)" required>
-            <br>
-            <input type="text" name="modelName" placeholder="Model Name" required>
-            <br>
-            <input type="text" name="target" placeholder="Target Column" required>
-            <br>
-            <br>
+            <label for"workName">Work Name: </label>
+            <input type="text" name="workName" placeholder="Project 1" required>
+            <br><br>
+            <label for="learning">Learning: </label>
+            <select name="learning" id="learning" required>
+                <option value="" selected="selected">Select learning</option>
+            </select>
+            <br><br>
+            <label for="task">Task: </label>
+            <select name="task" id="task" required>
+                <option value="" selected="selected">Please select a learning</option>
+            </select>
+            <br><br>
+            <label for="modelName">Model Name: </label>
+            <select name="modelName" id="modelName" requiredq>
+                <option value="" selected="selected">Please select a task</option>
+            </select>
+            <br><br>
+            <label for"target">Target </label>
+            <input type="text" name="target" placeholder="price/cat/dog" required>
+            <br><br>
+            <label for="learning">CSV/ZIP: </label>
             <input class="btn" name="csvFile" type="file" accept=".csv"/ required>
             <br><br>
             <button class="btn">Create</button>
@@ -18,3 +31,39 @@
     </div>
 </div>
 
+<script>
+    var subjectObject = {
+        "MachineLearning": {
+            "Regression": ["LinearRegression"],
+            "Classification": ["SVM", "NB", "DT"]
+        },
+        "DeepLearning": {
+            "ImageClassification": ["MobileNet", "EfficientNet", "GoogleNet"]
+        }
+    }
+    window.onload = function() {
+        var learningSel = document.getElementById("learning");
+        var taskSel = document.getElementById("task");
+        var modelNameSel = document.getElementById("modelName");
+        for (var x in subjectObject) {
+            learningSel.options[learningSel.options.length] = new Option(x, x);
+        }
+        learningSel.onchange = function() {
+            //empty Chapters- and Topics- dropdowns
+            modelNameSel.length = 1;
+            taskSel.length = 1;
+            //display correct values
+            for (var y in subjectObject[this.value]) {
+                taskSel.options[taskSel.options.length] = new Option(y, y);
+            }
+        }
+        taskSel.onchange = function() {
+            modelNameSel.length = 1;
+            //display correct values
+            var z = subjectObject[learningSel.value][this.value];
+            for (var i = 0; i < z.length; i++) {
+                modelNameSel.options[modelNameSel.options.length] = new Option(z[i], z[i]);
+            }
+        }
+    }
+</script>
