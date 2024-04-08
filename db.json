@@ -1,28 +1,29 @@
 {
   "instances": [
     {
-      "id": "240019cb0b",
+      "id": "b88fc8fe12",
       "workName": "project1",
-      "createdAt": "30 March 2024, 19:03",
-      "containerName": "exciting_grothendieck",
+      "createdAt": "08 April 2024, 06:35",
+      "containerName": "eager_haibt",
       "status": "trainable",
       "learning": "MachineLearning",
       "task": "Classification",
-      "modelName": "DT",
-      "target": "petals",
-      "csvFile": "./resources/240019cb0b/data.csv"
-    },
-    {
-      "id": "7d802e50c8",
-      "workName": "hello1",
-      "createdAt": "30 March 2024, 19:15",
-      "containerName": "thirsty_mclean",
-      "status": "trainable",
-      "learning": "DeepLearning",
-      "task": "ImageClassification",
-      "modelName": "MobileNet",
-      "target": "petals",
-      "csvFile": "./resources/7d802e50c8/data.csv"
+      "modelName": "SVM",
+      "target": "Survived",
+      "csvFile": "./resources/b88fc8fe12/data.csv",
+      "features": [
+        "PassengerId",
+        "Pclass",
+        "Name",
+        "Sex",
+        "Age",
+        "SibSp",
+        "Parch",
+        "Ticket",
+        "Fare",
+        "Cabin",
+        "Embarked"
+      ]
     }
   ]
 }
