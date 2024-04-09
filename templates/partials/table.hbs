@@ -30,14 +30,14 @@
                         <input type="hidden" name="action" value="train">
                         <button type="submit" class="btnTable" {{#if (eq status "trainable")}}{{else}} disabled{{/if}}>Train</button>
                     </form>
-                    <form action="/predict" method="post" style="display: inline-block;">
-                        <input type="hidden" name="id" value="{{id}}">
-                        <input type="hidden" name="action" value="predict">
+                    <form action="/showpredict/{{containerName}}" method="GET" style="display: inline-block;">
+                        {{!-- <input type="hidden" name="id" value="{{id}}">
+                        <input type="hidden" name="action" value="predict"> --}}
                         <button type="submit" class="btnTable" {{#if (eq status "predictable")}}{{else}} disabled{{/if}}>Predict</button>
                     </form>
-                    <form action="/showlog" method="post" style="display: inline-block;">
-                        <input type="hidden" name="id" value="{{id}}">
-                        <input type="hidden" name="action" value="showlog">
+                    <form action="/showlog/{{containerName}}" method="GET" style="display: inline-block;">
+                        {{!-- <input type="hidden" name="id" value="{{id}}">
+                        <input type="hidden" name="action" value="showlog"> --}}
                         <button type="submit" class="btnTable">Log</button>
                     </form>
                 </td>

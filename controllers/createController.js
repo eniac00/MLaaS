@@ -114,13 +114,16 @@ const create = async (req, res) => {
     file.mv(csvFile);
 
 
-    const csvHeaders = await getCSVHeaders(csvFile);
-    const features = csvHeaders.filter((header) => header != target);
 
     try {
+        const csvHeaders = await getCSVHeaders(csvFile);
+
+        if (!csvHeaders.includes(target)) return res.status(400).json({ "error": "target cannot be found in the provided csv" });
+
+        const features = csvHeaders.filter((header) => header != target);
         const containerName = await dockerCreateContainer();
 
-        if (!containerName) res.status(404).json({ "message": "container not created" });
+        if (!containerName) return res.status(404).json({ "message": "container not created" });
         
         const record = {
                 'id': id,
@@ -143,7 +146,7 @@ const create = async (req, res) => {
         res.redirect('/show');
     } catch (err) {
         console.error(err);
-        res.status(400).json({ "error": err })
+        res.status(400).json({ "error": err.message })
     }
 }
 

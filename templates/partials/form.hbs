@@ -34,12 +34,12 @@
 <script>
     var subjectObject = {
         "MachineLearning": {
-            "Regression": ["LinearRegression"],
-            "Classification": ["SVM", "NB", "DT"]
+            {{!-- "Regression": ["LinearRegression"], --}}
+            "Classification": ["SVM", "KNN", "LogisticRegression", "RandomForest"]
         },
-        "DeepLearning": {
+        {{!-- "DeepLearning": {
             "ImageClassification": ["MobileNet", "EfficientNet", "GoogleNet"]
-        }
+        } --}}
     }
     window.onload = function() {
         var learningSel = document.getElementById("learning");

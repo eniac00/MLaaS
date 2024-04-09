@@ -45,6 +45,7 @@ app.use('/show', require('./routes/show'));
 app.use('/train', require('./routes/train'));
 app.use('/predict', require('./routes/predict'));
 app.use('/showlog', require('./routes/showlog'));
+app.use('/showpredict', require('./routes/showpredict'));
 app.use('/signal', require('./routes/signal'));
 
 

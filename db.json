@@ -1,21 +1,73 @@
 {
   "instances": [
     {
-      "id": "1cea38fd01",
+      "id": "6231efe3d4",
       "workName": "project1",
-      "createdAt": "09 April 2024, 05:45",
-      "containerName": "stoic_goldstine",
-      "status": "trainable",
+      "createdAt": "10 April 2024, 00:36",
+      "containerName": "reverent_ganguly",
+      "status": "predictable",
       "learning": "MachineLearning",
       "task": "Classification",
-      "modelName": "SVM",
+      "modelName": "KNN",
       "target": "species",
-      "csvFile": "./resources/1cea38fd01/data.csv",
+      "csvFile": "./resources/6231efe3d4/data.csv",
       "features": [
         "sepal_length",
         "sepal_width",
         "petal_length",
         "petal_width"
+      ],
+      "_locals": {}
+    },
+    {
+      "id": "77b16bf1d2",
+      "workName": "project2",
+      "createdAt": "10 April 2024, 00:53",
+      "containerName": "lucid_jones",
+      "status": "predictable",
+      "learning": "MachineLearning",
+      "task": "Classification",
+      "modelName": "LogisticRegression",
+      "target": "Survived",
+      "csvFile": "./resources/77b16bf1d2/data.csv",
+      "features": [
+        "PassengerId",
+        "Pclass",
+        "Name",
+        "Sex",
+        "Age",
+        "SibSp",
+        "Parch",
+        "Ticket",
+        "Fare",
+        "Cabin",
+        "Embarked"
+      ],
+      "_locals": {}
+    },
+    {
+      "id": "d0383829d5",
+      "workName": "hello1",
+      "createdAt": "10 April 2024, 01:47",
+      "containerName": "lucid_neumann",
+      "status": "predictable",
+      "learning": "MachineLearning",
+      "task": "Classification",
+      "modelName": "RandomForest",
+      "target": "Survived",
+      "csvFile": "./resources/d0383829d5/data.csv",
+      "features": [
+        "PassengerId",
+        "Pclass",
+        "Name",
+        "Sex",
+        "Age",
+        "SibSp",
+        "Parch",
+        "Ticket",
+        "Fare",
+        "Cabin",
+        "Embarked"
       ]
     }
   ]

@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const showlogController = require('../controllers/showlogController');
+const showPredictController = require('../controllers/showPredictController');
 
 router.route('/:containerName')
-    .get(showlogController.showlog);
+    .get(showPredictController.show);
 
 module.exports = router;
