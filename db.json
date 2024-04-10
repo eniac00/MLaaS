@@ -1,5 +1,41 @@
 {
   "instances": [
-
+    {
+      "id": "6bba18e811",
+      "workName": "iris_classification",
+      "createdAt": "10 April 2024, 19:31",
+      "containerName": "quirky_euler",
+      "status": "predictable",
+      "learning": "MachineLearning",
+      "task": "Classification",
+      "modelName": "KNN",
+      "target": "species",
+      "csvFile": "./resources/6bba18e811/data.csv",
+      "features": [
+        "sepal_length",
+        "sepal_width",
+        "petal_length",
+        "petal_width"
+      ],
+      "_locals": {}
+    },
+    {
+      "id": "6f470ca976",
+      "workName": "iris_classification_2",
+      "createdAt": "10 April 2024, 19:35",
+      "containerName": "youthful_ardinghelli",
+      "status": "predictable",
+      "learning": "MachineLearning",
+      "task": "Classification",
+      "modelName": "RandomForest",
+      "target": "species",
+      "csvFile": "./resources/6f470ca976/data.csv",
+      "features": [
+        "sepal_length",
+        "sepal_width",
+        "petal_length",
+        "petal_width"
+      ]
+    }
   ]
 }
