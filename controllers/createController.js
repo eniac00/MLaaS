@@ -102,20 +102,16 @@ const create = async (req, res) => {
     const folderName = './resources/' + id;
 
     try {
+
         if (!fs.existsSync(folderName)) {
             fs.mkdirSync(folderName);
         }
-    } catch (err) {
-        console.log(err);
-    }
+            
 
-    const file = req.files.csvFile;
-    const csvFile = folderName + '/' + 'data.csv';
-    file.mv(csvFile);
+        const file = req.files.csvFile;
+        const csvFile = folderName + '/' + 'data.csv';
+        await file.mv(csvFile);
 
-
-
-    try {
         const csvHeaders = await getCSVHeaders(csvFile);
 
         if (!csvHeaders.includes(target)) return res.status(400).json({ "error": "target cannot be found in the provided csv" });

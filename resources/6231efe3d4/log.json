@@ -1,1 +1,0 @@
-[{"Target": "species", "Target Type": "Multiclass", "Numeric features": 4}, {"features": ["sepal_length", "sepal_width", "petal_length", "petal_width", "species"]}, {"Model": "K Neighbors Classifier", "Accuracy": 0.9778, "Precision": 0.9792, "Recall": 0.9778, "F1": 0.9778}]
