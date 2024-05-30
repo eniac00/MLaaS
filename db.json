@@ -36,6 +36,26 @@
         "petal_length",
         "petal_width"
       ]
+    },
+    {
+      "id": "1486d4f841",
+      "workName": "penguin_classification",
+      "createdAt": "08 May 2024, 15:53",
+      "containerName": "elastic_kapitsa",
+      "status": "predictable",
+      "learning": "MachineLearning",
+      "task": "Classification",
+      "modelName": "SVM",
+      "target": "species",
+      "csvFile": "./resources/1486d4f841/data.csv",
+      "features": [
+        "island",
+        "bill_length_mm",
+        "bill_depth_mm",
+        "flipper_length_mm",
+        "body_mass_g",
+        "sex"
+      ]
     }
   ]
 }

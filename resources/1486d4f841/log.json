@@ -1,0 +1,1 @@
+[{"Target": "species", "Target Type": "Multiclass", "Numeric features": 4}, {"features": ["species", "island", "bill_length_mm", "bill_depth_mm", "flipper_length_mm", "body_mass_g", "sex"]}, {"Model": "SVM - Linear Kernel", "Accuracy": 0.625, "Precision": 0.5237, "Recall": 0.625, "F1": 0.5577}]
